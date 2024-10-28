@@ -20,11 +20,14 @@ const Inicio = () => {
         </div>
       </div>
 
-     {/* Contenedor de opciones */}
-     <div className="opciones-container">
+     {/* Contenedor de opciones (cuadro general) */}
+     <div className="contenedor-opciones">
+        {/* Contenedor de botones */}
+        <div className="botones-container">
           <a href="/calculadora" className="opcion">Calculadora</a>
           <a href="/ejercicios-interactivos" className="opcion">Ejercicios</a>
         </div>
+      </div>
 
 
     </div>

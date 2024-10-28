@@ -76,23 +76,29 @@
   box-shadow: 0px 0px 5px #000;
 }
 
-/* Contenedor de las opciones de "Calculadora" y "Ejercicios Interactivos" */
-.opciones-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-  border: 1px solid #ddd; /* Borde gris claro */
+/* Contenedor general de opciones */
+.contenedor-opciones {
+  background-color: #f9f9f9;
+  border: 1px solid #a39898;
   border-radius: 8px;
   padding: 7.5rem;
   width: 80%;
   max-width: 400px;
-  margin: 0.5rem auto; /* Centrar el contenedor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  min-height: 200px; /* Altura mínima para hacer el contenedor más largo */
+  margin: 0.5rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  background-color: #f9f9f9; /* Fondo claro */
 }
 
+/* Contenedor para los botones, alineados horizontalmente */
+.botones-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Estilo de cada botón */
 .opcion {
   background-color: #4CAF50;
   color: white;
