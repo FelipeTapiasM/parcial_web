@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Contenedor principal */
+.main-container {
+  background-color: #03912d;
+  margin-top: 6rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Estilos para el título */
+.nivel0 {
+  
+  width: 100%;
+  height: auto;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-family: "Courier New", Courier, monospace;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 51, 0, 0.5);
+  text-align: center;
+  margin-top: 0px;
+  border: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  -moz-box-shadow: 0px 0px 30px #A3FF0F;
+  -webkit-box-shadow: 0px 0px 30px #A3FF0F;
+  box-shadow: 0px 0px 5px #000;
+}
+
+.nivel0X {
+  
+  max-width: 650px;
+  width: 90%;
+  height: auto;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-family: "Courier New", Courier, monospace;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 51, 0, 0.9);
+  text-align: center;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  -moz-box-shadow: 0px 0px 30px #A3FF0F;
+  -webkit-box-shadow: 0px 0px 30px #A3FF0F;
+  box-shadow: 0px 0px 5px #000;
+}
+
+/* Contenedor de las opciones de "Calculadora" y "Ejercicios Interactivos" */
+.opciones-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 8px;
+  padding: 7.5rem;
+  width: 80%;
+  max-width: 400px;
+  margin: 0.5rem auto; /* Centrar el contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  text-align: center;
+  background-color: #f9f9f9; /* Fondo claro */
+}
+
+.opcion {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  width: 150px;
+}
+
+.opcion:hover {
+  background-color: #388e3c;
+}
+
+.opcion:active {
+  background-color: #2e7d32;
+}
