@@ -26,6 +26,7 @@ const Inicio = () => {
         {/* Contenedor de botones */}
         <div className="botones-container">
           <a href="/calculadora" className="opcion">Calculadora</a>
+          <a href="/teoria" className="opcion">Teoria</a>
           <a href="/ejercicios-interactivos" className="opcion">Ejercicios</a>
         </div>
       </div>

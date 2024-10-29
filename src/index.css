@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: box-shadow 0.3s;
+  background: url(/public/m.jpg);
 }
 
 body:hover {
