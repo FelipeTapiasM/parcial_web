@@ -55,7 +55,6 @@
 }
 
 .nivel0X {
-  
   max-width: 650px;
   width: 90%;
   height: auto;
@@ -119,8 +118,64 @@
 
 .opcion:hover {
   background-color: #388e3c;
+  transform: scale(1.05); /* Aumenta el tamaño un 5% */
+  background-color: #b2dfdb; /* Cambia a un color de fondo diferente */
 }
 
 .opcion:active {
   background-color: #2e7d32;
+}
+
+/* Estilos generales del footer */
+.footer {
+  background-color: rgba(0, 51, 0, 0.9);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Contenedor principal de las secciones del footer */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Estilos para cada sección individual dentro del footer */
+.footer-section {
+  margin: 1rem;
+}
+
+/* Título de cada sección en el footer */
+.footer-section h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Enlaces dentro de cada sección */
+.footer-section a {
+  color: #b2dfdb;
+  text-decoration: none;
+  display: block;
+  margin: 0.2rem 0;
+  transition: color 0.3s;
+}
+
+/*Color de las opciones de contacto*/
+.footer-section p{
+  color: #b2dfdb;
+}
+
+/* Cambia el color de los enlaces al pasar el mouse */
+.footer-section a:hover {
+  color: #80cbc4;
+}
+
+/* Estilos para la parte inferior del footer (texto de derechos reservados) */
+.footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #a7ffeb;
 }

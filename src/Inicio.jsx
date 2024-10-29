@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './navbar';
+import Footer from './footer';
 
 
 const Inicio = () => {
@@ -29,7 +30,8 @@ const Inicio = () => {
         </div>
       </div>
 
-
+      {/*Exportar el footer*/}
+      <Footer />
     </div>
   );
 };
