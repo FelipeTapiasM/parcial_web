@@ -186,3 +186,76 @@
   color: #a7ffeb;
   text-align: center;
 }
+
+/* Contenedor principal de la calculadora */
+.calculadora-container {
+  background-color: #f0f8e2; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  padding: 2rem; 
+  width: 80%; /* Ancho de la calculadora como un porcentaje de la pantalla */
+  max-width: 400px; /* Maximo ancho para pantallas grandes */
+  margin: 2rem auto; /* Centrado horizontal y espacio arriba/abajo */
+  text-align: center; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Titulo y descripcion */
+.calculadora-container h2 {
+  color: #004d40; 
+  margin-bottom: 1rem; 
+  font-size: 1.5rem; 
+}
+
+.calculadora-container p {
+  color: #333; /* Color de la descripcion */
+  margin-bottom: 1.5rem; 
+}
+
+/* Estilo para los inputs de numeros */
+.input-numeros {
+  display: flex; /* Coloca los inputs en una linea horizontal */
+  justify-content: center; 
+  gap: 1rem; /* Espacio entre los inputs */
+  margin-bottom: 1rem; 
+}
+
+.input-numeros input {
+  width: 100px; /* Ancho de cada input */
+  padding: 0.5rem; /* Espaciado interno en los inputs */
+  text-align: center; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+}
+
+/* Botones de operacion */
+.botones-operacion button {
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  padding: 0.5rem 1rem; 
+  margin: 0.5rem; /* Espacio entre botones */
+  border-radius: 4px; 
+  cursor: pointer; /* Cambia el cursor a mano al pasar sobre el boton */
+  transition: background-color 0.3s; 
+}
+
+.botones-operacion button:hover {
+  background-color: #388e3c; /* Color de fondo al pasar el mouse */
+}
+
+/* Resultado */
+.resultado {
+  margin-top: 1.5rem; /* Espacio superior para separar del contenido anterior */
+}
+
+.resultado h3 {
+  color: #004d40; /* Color del texto de "Resultado" */
+  font-size: 1.3rem; /* Tamaño del texto de "Resultado" */
+}
+
+.resultado p {
+  font-size: 1.2rem; /* Tamaño del texto del resultado */
+  color: #333; /* Color del texto del resultado */
+  font-weight: bold; /* Negrita para resaltar el resultado */
+}
