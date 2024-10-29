@@ -126,26 +126,33 @@
   background-color: #2e7d32;
 }
 
-/* Estilos generales del footer */
+/* Contenedor principal del footer */
 .footer {
   background-color: rgba(0, 51, 0, 0.9);
   color: white;
   padding: 2rem 0;
   text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Organiza el contenido en una columna */
+  align-items: center; /* Centra el contenido horizontalmente */
 }
 
-/* Contenedor principal de las secciones del footer */
+/* Contenedor de las secciones del footer */
 .footer-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1000px;
-  margin: auto;
+  width: 100%;
+  margin-bottom: 1.5rem; /* Espacio entre el contenido y los derechos reservados */
 }
+
 
 /* Estilos para cada sección individual dentro del footer */
 .footer-section {
-  margin: 1rem;
+  margin: 0 2rem;
+  margin-left: -5%;
 }
 
 /* Título de cada sección en el footer */
@@ -173,9 +180,9 @@
   color: #80cbc4;
 }
 
-/* Estilos para la parte inferior del footer (texto de derechos reservados) */
+/* Posiciona la parte inferior del footer (derechos reservados) */
 .footer-bottom {
-  margin-top: 1rem;
   font-size: 0.9rem;
   color: #a7ffeb;
+  text-align: center;
 }
