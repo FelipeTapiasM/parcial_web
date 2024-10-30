@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -6,6 +7,7 @@ const Navbar = () => {
       backgroundColor: '#4CAF50',
       padding: '2rem',
       textAlign: 'center',
+      textDecoration: 'none',
       color: 'white',
       fontWeight: 'bold',
       fontSize: '1.5rem',
@@ -14,7 +16,8 @@ const Navbar = () => {
       width: '100%', // Ancho completo de la pantalla
       zIndex: 1000
     }}>
-      MatematicasPrimaria
+      {/* Enlace al inicio */}
+      <Link to="/" >MatematicasPrimaria</Link>
     </nav>
   );
 };
