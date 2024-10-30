@@ -1,5 +1,7 @@
 
 import React, { useState } from 'react';
+import Navbar from './navbar';
+import Footer from './footer';
 
 const Calculadora = () => {
     // Estados para almacenar los valores de los numeros ingresados
@@ -32,42 +34,49 @@ const Calculadora = () => {
     };
 
     return (
-        <div className="calculadora-container">
-          {/* Titulo y descripcion */}
-          <h2>Calculadora</h2>
-          <p>Ingrese dos numeros y seleccione la operacion.</p>
-          
-          <div className="input-numeros">
-            {/* Div para el primer numero */}
-            <input
-              type="number"
-              value={numero1}
-              onChange={(e) => setNumero1(parseFloat(e.target.value))}
-              placeholder="Numero 1"
-            />
+        <div>
+            {/*Sirve para exportar el navbar*/}
+            <Navbar />
+
+            <div className="calculadora-container">
+                {/* Titulo y descripcion */}
+                <h2>Calculadora</h2>
+                <p>Ingrese dos numeros y seleccione la operacion.</p>
+                
+                <div className="input-numeros">
+                    {/* Div para el primer numero */}
+                    <input
+                    type="number"
+                    value={numero1}
+                    onChange={(e) => setNumero1(parseFloat(e.target.value))}
+                    placeholder="Numero 1"
+                    />
+                    
+                    {/* Div para el segundo numero */}
+                    <input
+                    type="number"
+                    value={numero2}
+                    onChange={(e) => setNumero2(parseFloat(e.target.value))}
+                    placeholder="Numero 2"
+                    />
+                </div>
             
-            {/* Div para el segundo numero */}
-            <input
-              type="number"
-              value={numero2}
-              onChange={(e) => setNumero2(parseFloat(e.target.value))}
-              placeholder="Numero 2"
-            />
-          </div>
-    
-          <div className="botones-operacion">
-            {/* Botones para las operaciones */}
-            <button onClick={() => calcular('suma')}>Suma</button>
-            <button onClick={() => calcular('resta')}>Resta</button>
-            <button onClick={() => calcular('multiplicacion')}>Multiplicacion</button>
-            <button onClick={() => calcular('division')}>Division</button>
-          </div>
-    
-          <div className="resultado">
-            {/* Resultado de la operacion */}
-            <h3>Resultado:</h3>
-            <p>{resultado}</p>
-          </div>
+                <div className="botones-operacion">
+                    {/* Botones para las operaciones */}
+                    <button onClick={() => calcular('suma')}>Suma</button>
+                    <button onClick={() => calcular('resta')}>Resta</button>
+                    <button onClick={() => calcular('multiplicacion')}>Multiplicacion</button>
+                    <button onClick={() => calcular('division')}>Division</button>
+                </div>
+            
+                <div className="resultado">
+                    {/* Resultado de la operacion */}
+                    <h3>Resultado:</h3>
+                    <p>{resultado}</p>
+                </div>
+            </div>
+        {/*Sirve para exportar el footer*/}
+        <Footer />
         </div>
     );
 };

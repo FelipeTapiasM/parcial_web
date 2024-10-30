@@ -192,10 +192,10 @@
   background-color: #f0f8e2; 
   border: 1px solid #ddd; 
   border-radius: 8px; 
-  padding: 2rem; 
+  padding: 7rem; 
   width: 80%; /* Ancho de la calculadora como un porcentaje de la pantalla */
-  max-width: 400px; /* Maximo ancho para pantallas grandes */
-  margin: 2rem auto; /* Centrado horizontal y espacio arriba/abajo */
+  max-width: 409px; /* Maximo ancho para pantallas grandes */
+  margin: 7rem auto; /* Centrado horizontal y espacio arriba/abajo */
   text-align: center; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
