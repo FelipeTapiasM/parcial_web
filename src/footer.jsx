@@ -1,10 +1,11 @@
 // Footer.jsx
 import React from 'react';
+import { Link } from 'react-router-dom'; // Usa Link para enlaces internos
 import './App.css';
 
 const Footer = () => {
   return (
-    <footer className="footer" >
+    <footer className="footer">
       <div className="footer-content">
         {/* Información de contacto */}
         <div className="footer-section">
@@ -16,9 +17,10 @@ const Footer = () => {
         {/* Enlaces rápidos */}
         <div className="footer-section">
           <h4>Enlaces Rápidos</h4>
-          <a href="/">Inicio</a>
-          <a href="/calculadora">Calculadora</a>
-          <a href="/ejercicios-interactivos">Ejercicios Interactivos</a>
+          <Link to="/">Inicio</Link>
+          <Link to="/calculadora">Calculadora</Link>
+          <Link to="/teoria">Teoría</Link>
+          <Link to="/ejercicios">Ejercicios</Link> {/* Cambia a la ruta correcta */}
         </div>
 
         {/* Redes Sociales */}
@@ -32,7 +34,6 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>© 2024 MatemáticasPrimaria. Todos los derechos reservados.</p>
       </div>
-
     </footer>
   );
 };

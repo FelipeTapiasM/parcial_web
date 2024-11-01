@@ -1,261 +1,414 @@
+/* Estilos Generales de la Aplicación */
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.App-content {
+  flex: 1; /* Empuja el Footer hacia abajo si el contenido es corto */
+}
+
+/* Espacio entre el Navbar y el contenido */
+.page-content {
+  margin-top: 80px; /* Ajusta este valor según la altura del Navbar */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #4CAF50;
+  padding: 1rem;
   text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar li {
+  display: inline;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar a:hover {
+  background-color: #388e3c;
 }
 
-/* Contenedor principal */
+/* Contenedor Principal del Título en Inicio */
 .main-container {
   background-color: #03912d;
   margin-top: 6rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  text-align: center;
+  padding: 2rem;
+  color: white;
 }
 
-/* Estilos para el título */
 .nivel0 {
-  
   width: 100%;
-  height: auto;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding: 1px;
   font-family: "Courier New", Courier, monospace;
-  color: rgba(255, 255, 255, 1);
+  color: #fff;
   background-color: rgba(0, 51, 0, 0.5);
   text-align: center;
-  margin-top: 0px;
-  border: none;
-  padding-left: 0px;
-  padding-right: 0px;
-  -moz-box-shadow: 0px 0px 30px #A3FF0F;
-  -webkit-box-shadow: 0px 0px 30px #A3FF0F;
   box-shadow: 0px 0px 5px #000;
 }
 
 .nivel0X {
   max-width: 650px;
   width: 90%;
-  height: auto;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding: 1px;
   font-family: "Courier New", Courier, monospace;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(0, 51, 0, 0.9);
   text-align: center;
-  margin-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  border: none;
-  padding-left: 0px;
-  padding-right: 0px;
-  -moz-box-shadow: 0px 0px 30px #A3FF0F;
-  -webkit-box-shadow: 0px 0px 30px #A3FF0F;
+  margin: 0 auto;
   box-shadow: 0px 0px 5px #000;
 }
 
-/* Contenedor general de opciones */
+/* Contenedor General de Opciones en Inicio */
 .contenedor-opciones {
   background-color: #f9f9f9;
   border: 1px solid #a39898;
   border-radius: 8px;
-  padding: 7.5rem;
+  padding: 2rem;
   width: 80%;
   max-width: 400px;
-  min-height: 200px; /* Altura mínima para hacer el contenedor más largo */
-  margin: 0.5rem auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor para los botones, alineados verticalmente */
+/* Botones en el Contenedor de Opciones */
 .botones-container {
-  display: block;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  margin-top: 0.5rem;
-  
 }
 
-/* Estilo de cada botón */
 .opcion {
   background-color: #4CAF50;
   color: white;
   padding: 1rem;
-  border-top: 1px solid #b2dfdb;
-  border-bottom: 1px solid #b2dfdb;
+  border: none;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
+  border-radius: 8px;
   transition: background-color 0.3s;
-  width: 152%;
-  margin-left: -30%;
 }
 
 .opcion:hover {
   background-color: #388e3c;
-  transform: scale(1.05); /* Aumenta el tamaño un 5% */
-  background-color: #b2dfdb; /* Cambia a un color de fondo diferente */
 }
 
-.opcion:active {
-  background-color: #2e7d32;
-}
-
-/* Contenedor principal del footer */
+/* Footer */
 .footer {
   background-color: rgba(0, 51, 0, 0.9);
   color: white;
   padding: 2rem 0;
   text-align: center;
   width: 100%;
-  display: flex;
-  flex-direction: column; /* Organiza el contenido en una columna */
-  align-items: center; /* Centra el contenido horizontalmente */
 }
 
-/* Contenedor de las secciones del footer */
 .footer-content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
   max-width: 1000px;
-  width: 100%;
-  margin-bottom: 1.5rem; /* Espacio entre el contenido y los derechos reservados */
+  margin: 0 auto;
 }
 
-
-/* Estilos para cada sección individual dentro del footer */
 .footer-section {
-  margin: 0 2rem;
-  margin-left: -5%;
+  margin: 1rem;
 }
 
-/* Título de cada sección en el footer */
 .footer-section h4 {
-  margin-bottom: 0.5rem;
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Enlaces dentro de cada sección */
 .footer-section a {
   color: #b2dfdb;
   text-decoration: none;
   display: block;
-  margin: 0.2rem 0;
+  margin: 0.3rem 0;
   transition: color 0.3s;
 }
 
-/*Color de las opciones de contacto*/
-.footer-section p{
-  color: #b2dfdb;
-}
-
-/* Cambia el color de los enlaces al pasar el mouse */
 .footer-section a:hover {
   color: #80cbc4;
 }
 
-/* Posiciona la parte inferior del footer (derechos reservados) */
 .footer-bottom {
   font-size: 0.9rem;
   color: #a7ffeb;
   text-align: center;
+  margin-top: 1rem;
 }
 
-/* Contenedor principal de la calculadora */
+/* Contenedor de la Calculadora */
 .calculadora-container {
-  background-color: #f0f8e2; 
-  border: 1px solid #ddd; 
-  border-radius: 8px; 
-  padding: 7rem; 
-  width: 80%; /* Ancho de la calculadora como un porcentaje de la pantalla */
-  max-width: 409px; /* Maximo ancho para pantallas grandes */
-  margin: 7rem auto; /* Centrado horizontal y espacio arriba/abajo */
-  text-align: center; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: #f0f8e2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 80%;
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Titulo y descripcion */
 .calculadora-container h2 {
-  color: #004d40; 
-  margin-bottom: 1rem; 
-  font-size: 1.5rem; 
+  color: #004d40;
+  margin-bottom: 1rem;
 }
 
-.calculadora-container p {
-  color: #333; /* Color de la descripcion */
-  margin-bottom: 1.5rem; 
-}
-
-/* Estilo para los inputs de numeros */
 .input-numeros {
-  display: flex; /* Coloca los inputs en una linea horizontal */
-  justify-content: center; 
-  gap: 1rem; /* Espacio entre los inputs */
-  margin-bottom: 1rem; 
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .input-numeros input {
-  width: 100px; /* Ancho de cada input */
-  padding: 0.5rem; /* Espaciado interno en los inputs */
-  text-align: center; 
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
+  width: 100px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-/* Botones de operacion */
 .botones-operacion button {
-  background-color: #4CAF50; 
-  color: white; 
-  border: none; 
-  padding: 0.5rem 1rem; 
-  margin: 0.5rem; /* Espacio entre botones */
-  border-radius: 4px; 
-  cursor: pointer; /* Cambia el cursor a mano al pasar sobre el boton */
-  transition: background-color 0.3s; 
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .botones-operacion button:hover {
-  background-color: #388e3c; /* Color de fondo al pasar el mouse */
+  background-color: #388e3c;
 }
 
-/* Resultado */
 .resultado {
-  margin-top: 1.5rem; /* Espacio superior para separar del contenido anterior */
+  margin-top: 1.5rem;
 }
 
 .resultado h3 {
-  color: #004d40; /* Color del texto de "Resultado" */
-  font-size: 1.3rem; /* Tamaño del texto de "Resultado" */
+  color: #004d40;
+  font-size: 1.3rem;
+}
+
+/* Contenedor de los pasos en la calculadora */
+.resultado pre {
+  white-space: pre-wrap; /* Permite que el texto se ajuste dentro del contenedor */
+  word-wrap: break-word; /* Fuerza que las palabras largas se ajusten a la siguiente línea */
+  background-color: #f0f8e2; /* Color de fondo para destacar */
+  padding: 1rem; /* Espacio interno para que el texto no esté pegado a los bordes */
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #ddd; /* Borde para separar del fondo */
+  max-width: 100%; /* Asegura que el contenedor no exceda el ancho del contenedor padre */
+  overflow-wrap: break-word; /* Fuerza el ajuste de las palabras si es necesario */
+  text-align: left; /* Alinea el texto a la izquierda para mayor legibilidad */
+  margin-top: 1rem; /* Espacio adicional arriba para separar del resto del contenido */
 }
 
 .resultado p {
-  font-size: 1.2rem; /* Tamaño del texto del resultado */
-  color: #333; /* Color del texto del resultado */
-  font-weight: bold; /* Negrita para resaltar el resultado */
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Contenedor de Teoría */
+.teoria-container {
+  background-color: #f0f8e2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 80%;
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teoria-container h2 {
+  color: #004d40;
+  margin-bottom: 1rem;
+}
+
+.operacion-teoria {
+  margin-top: 20px;
+}
+
+.operacion-teoria h3 {
+  color: #004d40;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.operacion-teoria p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Contenedor de Ejercicios Interactivos */
+.ejercicios-container {
+  background-color: #f0f8e2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 80%;
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ejercicios-container h2 {
+  color: #004d40;
+  margin-bottom: 1rem;
+}
+
+.pregunta h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.manzanas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.grupo-manzanas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.iconos-manzanas {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contador-manzanas {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.manzana-icon {
+  color: #FF6347; /* Color rojo para las manzanas */
+  font-size: 2rem; /* Tamaño del icono */
+}
+
+.mas-simbolo {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin: 0.5rem 0;
+}
+
+/* Opciones de respuesta */
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.opcion {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.opcion:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.opcion.correcto {
+  background-color: #4CAF50;
+  border: 2px solid #8BC34A;
+  color: white;
+}
+
+.opcion.incorrecto {
+  background-color: #F44336;
+  border: 2px solid #E57373;
+  color: white;
+}
+
+/* Contenedor de la explicación */
+.explicacion {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f0f8e2;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.explicacion h3 {
+  color: #004d40;
+}
+
+.explicacion-pasos {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+/* Botones de navegación entre ejercicios */
+.boton-siguiente, .boton-reiniciar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.boton-siguiente:hover, .boton-reiniciar:hover {
+  background-color: #388e3c;
 }
