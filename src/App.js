@@ -2,12 +2,12 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from './navbar';
 import Inicio from './Inicio';
 import Calculadora from './Calculadora';
 import Teoria from './Teoria';
 import EjerciciosInteractivos from './EjerciciosInteractivos';
-import Footer from './Footer';
+import Footer from './footer';
 
 function App() {
   return (

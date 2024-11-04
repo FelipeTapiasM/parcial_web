@@ -54,11 +54,11 @@
 /* Contenedor Principal del Título en Inicio */
 .main-container {
   background-color: #03912d;
-  margin-top: 6rem;
+  margin-top: -2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   text-align: center;
-  padding: 2rem;
+  padding: 0rem;
   color: white;
 }
 
