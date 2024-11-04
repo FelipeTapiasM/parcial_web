@@ -10,9 +10,19 @@ const Calculadora = () => {
     setPantalla(pantalla + valor);
   };
 
+  // Función para evaluar expresiones matemáticas de forma segura
+  const evaluarExpresion = (expresion) => {
+    try {
+      const func = new Function("return " + expresion);
+      return func();
+    } catch {
+      throw new Error("Error de cálculo");
+    }
+  };
+
   const calcularResultado = () => {
     try {
-      const res = eval(pantalla);
+      const res = evaluarExpresion(pantalla);
       let pasosOperacion = "";
 
       // Genera explicación de los pasos según la operación
@@ -82,7 +92,6 @@ const Calculadora = () => {
         <button onClick={() => agregarValor("8")}>8</button>
         <button onClick={() => agregarValor("9")}>9</button>
         <button onClick={() => agregarValor("*")} className="boton-operador">×</button>
-
 
         <button onClick={() => agregarValor("4")}>4</button>
         <button onClick={() => agregarValor("5")}>5</button>
