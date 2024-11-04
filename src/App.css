@@ -51,6 +51,51 @@
   background-color: #388e3c;
 }
 
+/* Footer */
+.footer {
+  background-color: rgba(0, 51, 0, 0.9);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  margin: 1rem;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #b2dfdb;
+  text-decoration: none;
+  display: block;
+  margin: 0.3rem 0;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #80cbc4;
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  color: #a7ffeb;
+  text-align: center;
+  margin-top: 1rem;
+}
+
 /* Contenedor Principal del Título en Inicio */
 .main-container {
   background-color: #03912d;
@@ -121,126 +166,129 @@
   background-color: #388e3c;
 }
 
-/* Footer */
-.footer {
-  background-color: rgba(0, 51, 0, 0.9);
-  color: white;
-  padding: 2rem 0;
+/* Contenedor de la Calculadora */
+.calculadora-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333; /* Fondo oscuro */
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 320px;
+  margin: 2rem auto;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calculadora-container h2 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Pantalla de la calculadora */
+.pantalla {
+  background-color: #222;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: right;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+/* Grid de botones */
+.botones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* Estilos para los botones generales */
+.botones-grid button {
+  background-color: #444;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botones-grid button:hover {
+  background-color: #555;
+}
+
+/* Botón de función especial (C) */
+.boton-funcion {
+  background-color: #d9534f;
+  grid-column: span 3; /* Ocupa toda la primera fila */
+}
+
+.boton-funcion:hover {
+  background-color: #c9302c;
+}
+
+/* Botones de operadores (+, -, *, /) */
+.boton-operador {
+  background-color: #5bc0de;
+}
+
+.boton-operador:hover {
+  background-color: #31b0d5;
+}
+
+/* Botón de igual (=) */
+.boton-igual {
+  background-color: #5cb85c;
+  grid-column: span 2; /* Ocupa dos columnas en la última fila */
+}
+
+.boton-igual:hover {
+  background-color: #4cae4c;
+}
+
+/* Botón de cero (0) ocupa más espacio */
+.boton-cero {
+  grid-column: span 1;
+}
+
+/* Resultado y pasos */
+.resultado {
+  font-size: 1rem;
+  color: #ddd;
+  margin-top: 1rem;
   text-align: center;
   width: 100%;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.footer-section {
-  margin: 1rem;
-}
-
-.footer-section h4 {
+.resultado h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  color: #4CAF50;
 }
 
-.footer-section a {
-  color: #b2dfdb;
-  text-decoration: none;
-  display: block;
-  margin: 0.3rem 0;
-  transition: color 0.3s;
-}
-
-.footer-section a:hover {
-  color: #80cbc4;
-}
-
-.footer-bottom {
-  font-size: 0.9rem;
-  color: #a7ffeb;
-  text-align: center;
+.resultado h4 {
+  font-size: 1rem;
+  color: #fff;
   margin-top: 1rem;
 }
 
-/* Contenedor de la Calculadora */
-.calculadora-container {
-  background-color: #f0f8e2;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 2rem;
-  width: 80%;
-  max-width: 400px;
-  margin: 2rem auto;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.calculadora-container h2 {
-  color: #004d40;
-  margin-bottom: 1rem;
-}
-
-.input-numeros {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.input-numeros input {
-  width: 100px;
-  padding: 0.5rem;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.botones-operacion button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.botones-operacion button:hover {
-  background-color: #388e3c;
-}
-
-.resultado {
-  margin-top: 1.5rem;
-}
-
-.resultado h3 {
-  color: #004d40;
-  font-size: 1.3rem;
-}
-
-/* Contenedor de los pasos en la calculadora */
 .resultado pre {
-  white-space: pre-wrap; /* Permite que el texto se ajuste dentro del contenedor */
-  word-wrap: break-word; /* Fuerza que las palabras largas se ajusten a la siguiente línea */
-  background-color: #f0f8e2; /* Color de fondo para destacar */
-  padding: 1rem; /* Espacio interno para que el texto no esté pegado a los bordes */
-  border-radius: 8px; /* Bordes redondeados */
-  border: 1px solid #ddd; /* Borde para separar del fondo */
-  max-width: 100%; /* Asegura que el contenedor no exceda el ancho del contenedor padre */
-  overflow-wrap: break-word; /* Fuerza el ajuste de las palabras si es necesario */
-  text-align: left; /* Alinea el texto a la izquierda para mayor legibilidad */
-  margin-top: 1rem; /* Espacio adicional arriba para separar del resto del contenido */
-}
-
-.resultado p {
-  font-size: 1.2rem;
-  color: #333;
-  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ccc;
+  background-color: #222;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 /* Contenedor de Teoría */

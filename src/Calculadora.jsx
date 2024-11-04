@@ -2,105 +2,105 @@
 import React, { useState } from 'react';
 
 const Calculadora = () => {
-  const [numero1, setNumero1] = useState(0);
-  const [numero2, setNumero2] = useState(0);
+  const [pantalla, setPantalla] = useState("");
   const [resultado, setResultado] = useState("");
-  const [pasos, setPasos] = useState(""); // Estado para los pasos desglosados
+  const [pasos, setPasos] = useState("");
 
-  const calcular = (operacion) => {
-    let res;
-    let pasosOperacion = "";
+  const agregarValor = (valor) => {
+    setPantalla(pantalla + valor);
+  };
 
-    switch (operacion) {
-      case 'suma':
-        res = numero1 + numero2;
-        pasosOperacion = `Primero, contamos el número ${numero1}. Luego, añadimos ${numero2} uno por uno:\n`;
-        for (let i = 1; i <= numero2; i++) {
-          pasosOperacion += `${numero1} + ${i} = ${numero1 + i}\n`;
+  const calcularResultado = () => {
+    try {
+      const res = eval(pantalla);
+      let pasosOperacion = "";
+
+      // Genera explicación de los pasos según la operación
+      if (pantalla.includes("+")) {
+        const [num1, num2] = pantalla.split("+").map(Number);
+        pasosOperacion = `Para sumar ${num1} y ${num2}, sumamos cada número:\n`;
+        for (let i = 1; i <= num2; i++) {
+          pasosOperacion += `${num1} + ${i} = ${num1 + i}\n`;
         }
-        pasosOperacion += `Así, el resultado final es ${res}.`;
-        break;
-
-      case 'resta':
-        res = numero1 - numero2;
-        pasosOperacion = `Empezamos con ${numero1}. Luego, quitamos ${numero2} uno por uno:\n`;
-        for (let i = 1; i <= numero2; i++) {
-          pasosOperacion += `${numero1} - ${i} = ${numero1 - i}\n`;
+        pasosOperacion += `Resultado final: ${res}`;
+      } else if (pantalla.includes("-")) {
+        const [num1, num2] = pantalla.split("-").map(Number);
+        pasosOperacion = `Para restar ${num2} de ${num1}, quitamos uno a uno:\n`;
+        for (let i = 1; i <= num2; i++) {
+          pasosOperacion += `${num1} - ${i} = ${num1 - i}\n`;
         }
-        pasosOperacion += `Por lo tanto, el resultado es ${res}.`;
-        break;
-
-      case 'multiplicacion':
-        res = numero1 * numero2;
-        pasosOperacion = `Multiplicar es como sumar varias veces. Sumamos ${numero1}, ${numero2} veces:\n`;
+        pasosOperacion += `Resultado final: ${res}`;
+      } else if (pantalla.includes("*")) {
+        const [num1, num2] = pantalla.split("*").map(Number);
+        pasosOperacion = `Multiplicar ${num1} por ${num2} es como sumar ${num1}, ${num2} veces:\n`;
         let sum = 0;
-        for (let i = 1; i <= numero2; i++) {
-          sum += numero1;
-          pasosOperacion += `${numero1} × ${i} = ${sum}\n`;
+        for (let i = 1; i <= num2; i++) {
+          sum += num1;
+          pasosOperacion += `${num1} × ${i} = ${sum}\n`;
         }
-        pasosOperacion += `Entonces, el resultado es ${res}.`;
-        break;
-
-      case 'division':
-        if (numero2 !== 0) {
-          res = (numero1 / numero2).toFixed(2);
-          pasosOperacion = `Queremos repartir ${numero1} en ${numero2} grupos iguales.\n`;
-
-          let elementosPorGrupo = Math.floor(numero1 / numero2);
-          let sobrante = numero1 % numero2;
-
-          pasosOperacion += `Cada grupo recibe ${elementosPorGrupo}.\n`;
-
-          if (sobrante > 0) {
-            pasosOperacion += `Nos sobran ${sobrante} que no se pueden repartir equitativamente.\n`;
+        pasosOperacion += `Resultado final: ${res}`;
+      } else if (pantalla.includes("/")) {
+        const [num1, num2] = pantalla.split("/").map(Number);
+        if (num2 !== 0) {
+          const cociente = Math.floor(num1 / num2);
+          const residuo = num1 % num2;
+          pasosOperacion = `Dividimos ${num1} en ${num2} partes iguales:\n`;
+          pasosOperacion += `Cada parte recibe ${cociente}.\n`;
+          if (residuo > 0) {
+            pasosOperacion += `Sobra ${residuo} que no se puede dividir.\n`;
           }
-
-          pasosOperacion += `Así, cada grupo tiene ${elementosPorGrupo} y el resultado es aproximadamente ${res}.`;
+          pasosOperacion += `Resultado final: ${res}`;
         } else {
-          res = "Error: División por cero";
           pasosOperacion = "No se puede dividir entre 0.";
+          setResultado("Error");
         }
-        break;
+      }
 
-      default:
-        break;
+      setResultado(res);
+      setPasos(pasosOperacion);
+      setPantalla(res.toString());
+    } catch (error) {
+      setResultado("Error");
+      setPasos("Hubo un error en el cálculo.");
     }
+  };
 
-    setResultado(res);
-    setPasos(pasosOperacion); // Actualiza los pasos detallados
+  const limpiarPantalla = () => {
+    setPantalla("");
+    setResultado("");
+    setPasos("");
   };
 
   return (
     <div className="calculadora-container">
-      <h2>Calculadora</h2>
-      <p>Ingrese dos números y seleccione la operación.</p>
+      <div className="pantalla">{pantalla || "0"}</div>
+      <div className="botones-grid">
+        <button onClick={limpiarPantalla} className="boton-funcion">C</button>
+        <button onClick={() => agregarValor("/")} className="boton-operador">÷</button>
 
-      <div className="input-numeros">
-        <input
-          type="number"
-          value={numero1}
-          onChange={(e) => setNumero1(parseFloat(e.target.value))}
-          placeholder="Número 1"
-        />
-        <input
-          type="number"
-          value={numero2}
-          onChange={(e) => setNumero2(parseFloat(e.target.value))}
-          placeholder="Número 2"
-        />
+        <button onClick={() => agregarValor("7")}>7</button>
+        <button onClick={() => agregarValor("8")}>8</button>
+        <button onClick={() => agregarValor("9")}>9</button>
+        <button onClick={() => agregarValor("*")} className="boton-operador">×</button>
+
+
+        <button onClick={() => agregarValor("4")}>4</button>
+        <button onClick={() => agregarValor("5")}>5</button>
+        <button onClick={() => agregarValor("6")}>6</button>
+        <button onClick={() => agregarValor("+")} className="boton-operador">+</button>
+
+        <button onClick={() => agregarValor("1")}>1</button>
+        <button onClick={() => agregarValor("2")}>2</button>
+        <button onClick={() => agregarValor("3")}>3</button>
+        <button onClick={() => agregarValor("-")} className="boton-operador">−</button>
+
+        <button onClick={() => agregarValor("0")} className="boton-cero">0</button>
+        <button onClick={() => agregarValor(".")}>.</button>
+        <button onClick={calcularResultado} className="boton-igual">=</button>
       </div>
-
-      <div className="botones-operacion">
-        <button onClick={() => calcular('suma')}>Suma</button>
-        <button onClick={() => calcular('resta')}>Resta</button>
-        <button onClick={() => calcular('multiplicacion')}>Multiplicación</button>
-        <button onClick={() => calcular('division')}>División</button>
-      </div>
-
       <div className="resultado">
-        <h3>Resultado:</h3>
-        <p>{resultado}</p>
-        <h3>Pasos:</h3>
+        <h3>Resultado: {resultado}</h3>
+        <h4>Explicación de los pasos:</h4>
         <pre>{pasos}</pre>
       </div>
     </div>
