@@ -2,16 +2,16 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  min-height: 100vh;
 }
 
 .App-content {
-  flex: 1; /* Empuja el Footer hacia abajo si el contenido es corto */
+  flex: 1;
 }
 
 /* Espacio entre el Navbar y el contenido */
 .page-content {
-  margin-top: 80px; /* Ajusta este valor según la altura del Navbar */
+  margin-top: 80px;
 }
 
 /* Navbar */
@@ -142,6 +142,24 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Botones para seleccionar tipo de juego */
+.boton-seleccion {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 0.5rem;
+}
+
+.boton-seleccion:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
 /* Botones en el Contenedor de Opciones */
 .botones-container {
   display: flex;
@@ -166,12 +184,24 @@
   background-color: #388e3c;
 }
 
+.opcion.correcto {
+  background-color: #4CAF50;
+  border: 2px solid #8BC34A;
+  color: white;
+}
+
+.opcion.incorrecto {
+  background-color: #F44336;
+  border: 2px solid #E57373;
+  color: white;
+}
+
 /* Contenedor de la Calculadora */
 .calculadora-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #333; /* Fondo oscuro */
+  background-color: #333;
   border-radius: 12px;
   padding: 1.5rem;
   width: 100%;
@@ -229,7 +259,7 @@
 /* Botón de función especial (C) */
 .boton-funcion {
   background-color: #d9534f;
-  grid-column: span 3; /* Ocupa toda la primera fila */
+  grid-column: span 3;
 }
 
 .boton-funcion:hover {
@@ -248,7 +278,7 @@
 /* Botón de igual (=) */
 .boton-igual {
   background-color: #5cb85c;
-  grid-column: span 2; /* Ocupa dos columnas en la última fila */
+  grid-column: span 2;
 }
 
 .boton-igual:hover {
@@ -335,6 +365,7 @@
   margin: 2rem auto;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .ejercicios-container h2 {
@@ -363,8 +394,11 @@
 }
 
 .iconos-manzanas {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
   gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .contador-manzanas {
@@ -374,8 +408,8 @@
 }
 
 .manzana-icon {
-  color: #FF6347; /* Color rojo para las manzanas */
-  font-size: 2rem; /* Tamaño del icono */
+  color: #FF6347;
+  font-size: 2rem;
 }
 
 .mas-simbolo {
@@ -458,5 +492,25 @@
 }
 
 .boton-siguiente:hover, .boton-reiniciar:hover {
+  background-color: #388e3c;
+}
+
+/* Botón de volver en la esquina superior izquierda */
+.boton-volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.boton-volver:hover {
   background-color: #388e3c;
 }
