@@ -1,23 +1,21 @@
 // App.js
 import React from 'react';
-import './App.css';
+import './styles/App.css'; // Ajusta la ruta si el CSS está en la carpeta styles
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import Inicio from './Inicio';
-import Calculadora from './Calculadora';
-import Teoria from './Teoria';
-import EjerciciosInteractivos from './EjerciciosInteractivos';
-import Footer from './Footer';
+import Navbar from './components/Navbar';
+import Inicio from './components/Inicio';
+import Teoria from './components/Teoria';
+import EjerciciosInteractivos from './components/EjerciciosInteractivos';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <div className="App-content page-content"> {/* Aplica la clase aquí */}
+        <div className="App-content page-content">
           <Routes>
             <Route path="/" element={<Inicio />} />
-            <Route path="/calculadora" element={<Calculadora />} />
             <Route path="/teoria" element={<Teoria />} />
             <Route path="/ejercicios" element={<EjerciciosInteractivos />} />
           </Routes>

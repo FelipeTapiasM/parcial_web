@@ -1,0 +1,228 @@
+/* Estilos Generales de Ejercicios Interactivos */
+.ejercicios-container {
+    background-color: #f0f8e2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 90%; /* Aumentado para un contenedor más ancho */
+    max-width: 700px; /* Máximo ancho ampliado */
+    margin: 2rem auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-top: 4rem; /* Espacio adicional para el botón Volver */
+}
+
+/* Título del Ejercicio */
+.ejercicios-container h2 {
+    color: #2C3E50; /* Color más oscuro para mayor legibilidad */
+    font-weight: bold; /* Fuente en negrilla */
+    margin-bottom: 1rem;
+}
+
+/* Contenedor de puntaje y vidas */
+.marcadores {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+/* Estilo individual para el puntaje y las vidas */
+.puntaje, .vidas {
+    font-size: 1.2rem;
+    color: #2C3E50; /* Color modificado */
+    font-weight: bold; /* Fuente en negrilla */
+    padding: 0.5rem;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Para que ambos se distribuyan de forma uniforme */
+    text-align: center;
+}
+
+/* Botón de Volver */
+.boton-volver {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.4rem 0.8rem; /* Reducido el padding para hacer el botón más pequeño */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem; /* Reducido el tamaño de la fuente */
+    font-weight: bold; /* Fuente en negrilla */
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    margin-bottom: 1rem;
+    position: absolute;
+    left: 0; /* Alineado al borde izquierdo */
+    top: 1rem; /* Distancia desde la parte superior */
+}
+
+.boton-volver:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Selección de Tipo de Juego */
+.seleccion-juego h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #2C3E50; /* Color modificado */
+    font-weight: bold; /* Fuente en negrilla */
+}
+
+.boton-seleccion {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold; /* Fuente en negrilla */
+    margin: 0.5rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-seleccion:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Contenedor de Manzanas */
+.manzanas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.grupo-manzanas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.iconos-manzanas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.manzana-icon {
+    color: #FF6347;
+    font-size: 2rem;
+}
+
+.operador-simbolo {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin: 0.5rem 0;
+    font-weight: bold; /* Fuente en negrilla */
+}
+
+/* Opciones de Respuesta */
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.opcion {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold; /* Fuente en negrilla */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.opcion:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+.opcion.correcto {
+    background-color: #4CAF50;
+    border: 2px solid #8BC34A;
+    color: white;
+}
+
+.opcion.incorrecto {
+    background-color: #F44336;
+    border: 2px solid #E57373;
+    color: white;
+}
+
+/* Contenedor de Explicación */
+.explicacion {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f0f8e2;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.explicacion h3 {
+    color: #2C3E50; /* Color modificado */
+    font-weight: bold; /* Fuente en negrilla */
+}
+
+.explicacion-pasos {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 1rem;
+    font-weight: bold; /* Fuente en negrilla */
+}
+
+/* Botones de Navegación */
+.boton-siguiente, .boton-reiniciar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold; /* Fuente en negrilla */
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.boton-siguiente:hover, .boton-reiniciar:hover {
+    background-color: #388e3c;
+}
+
+/* Juego Terminado */
+.juego-terminado {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #fbe9e7;
+    border-radius: 8px;
+    border: 1px solid #ffccbc;
+    color: #c62828;
+    text-align: center;
+}
+
+.juego-terminado h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #c62828;
+    font-weight: bold; /* Fuente en negrilla */
+}

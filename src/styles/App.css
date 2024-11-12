@@ -1,0 +1,44 @@
+/* Estilos generales de la aplicación */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal de la aplicación */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-content {
+  flex: 1; /* Permite que el contenido empuje el footer hacia abajo */
+  margin-top: 80px; /* Espacio debajo del Navbar */
+}
+
+.page-content {
+  padding: 20px;
+}
+
+/* Estilo global para enlaces, ajustable en cada componente */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #388e3c;
+}
+
+/* Reset CSS básico para todos los elementos */
+* {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}

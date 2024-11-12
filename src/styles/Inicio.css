@@ -1,0 +1,76 @@
+/* styles/Inicio.css */
+
+.main-container {
+    background-color: #03912d;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+  }
+  
+  .nivel0 {
+    width: 100%;
+    padding: 1px;
+    font-family: "Courier New", Courier, monospace;
+    color: #fff;
+    background-color: rgba(0, 51, 0, 0.5);
+    text-align: center;
+    box-shadow: 0px 0px 5px #000;
+  }
+  
+  .nivel0X {
+    max-width: 650px;
+    width: 90%;
+    padding: 1px;
+    font-family: "Courier New", Courier, monospace;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 51, 0, 0.9);
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px #000;
+  }
+  
+  .titulo-principal {
+    font-size: 1.25rem;
+    color: white;
+  }
+  
+  /* Contenedor General de Opciones en Inicio */
+  .contenedor-opciones {
+    background-color: #f9f9f9;
+    border: 1px solid #a39898;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 80%;
+    max-width: 400px;
+    margin: 2rem auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Botones en el Contenedor de Opciones */
+  .botones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .opcion {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .opcion:hover {
+    background-color: #388e3c;
+  }
+  

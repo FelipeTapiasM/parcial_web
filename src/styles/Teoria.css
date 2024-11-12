@@ -1,0 +1,85 @@
+/* styles/Teoria.css */
+
+.teoria-container {
+    background-color: #f0f8e2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .teoria-container h2 {
+    color: #004d40;
+    margin-bottom: 1rem;
+  }
+  
+  .operacion-teoria {
+    margin-top: 20px;
+    margin-bottom: 2rem;
+  }
+  
+  .operacion-teoria h3 {
+    color: #004d40;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .operacion-teoria p {
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Contenedor para los ejemplos visuales */
+  .teoria-ejemplo {
+    margin-top: 1rem;
+    background-color: #e7f5e2;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .teoria-ejemplo p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .iconos-manzanas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  
+  /* Estilos para grupos de manzanas (multiplicación y división) */
+  .grupo-manzanas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  
+  .manzana-icon {
+    color: #FF6347; /* Color rojo para las manzanas */
+    font-size: 2rem; /* Tamaño del icono */
+  }
+  
+  a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #00695c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #004d40;
+    text-decoration: underline;
+  }
+  
