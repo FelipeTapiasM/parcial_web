@@ -4,19 +4,19 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 2rem;
-    width: 90%; /* Aumentado para un contenedor más ancho */
-    max-width: 700px; /* Máximo ancho ampliado */
+    width: 90%;
+    max-width: 700px;
     margin: 2rem auto;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    padding-top: 4rem; /* Espacio adicional para el botón Volver */
+    padding-top: 4rem;
 }
 
 /* Título del Ejercicio */
 .ejercicios-container h2 {
-    color: #2C3E50; /* Color más oscuro para mayor legibilidad */
-    font-weight: bold; /* Fuente en negrilla */
+    color: #2C3E50;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
@@ -32,14 +32,14 @@
 /* Estilo individual para el puntaje y las vidas */
 .puntaje, .vidas {
     font-size: 1.2rem;
-    color: #2C3E50; /* Color modificado */
-    font-weight: bold; /* Fuente en negrilla */
+    color: #2C3E50;
+    font-weight: bold;
     padding: 0.5rem;
     background-color: #f7f7f7;
     border-radius: 6px;
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 45%; /* Para que ambos se distribuyan de forma uniforme */
+    width: 45%;
     text-align: center;
 }
 
@@ -47,18 +47,18 @@
 .boton-volver {
     background-color: #4CAF50;
     color: white;
-    padding: 0.4rem 0.8rem; /* Reducido el padding para hacer el botón más pequeño */
+    padding: 0.4rem 0.8rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 0.9rem; /* Reducido el tamaño de la fuente */
-    font-weight: bold; /* Fuente en negrilla */
+    font-size: 0.9rem;
+    font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
     display: inline-block;
     margin-bottom: 1rem;
     position: absolute;
-    left: 0; /* Alineado al borde izquierdo */
-    top: 1rem; /* Distancia desde la parte superior */
+    left: 0;
+    top: 1rem;
 }
 
 .boton-volver:hover {
@@ -70,8 +70,8 @@
 .seleccion-juego h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #2C3E50; /* Color modificado */
-    font-weight: bold; /* Fuente en negrilla */
+    color: #2C3E50;
+    font-weight: bold;
 }
 
 .boton-seleccion {
@@ -82,7 +82,7 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.2rem;
-    font-weight: bold; /* Fuente en negrilla */
+    font-weight: bold;
     margin: 0.5rem;
     transition: background-color 0.3s, transform 0.2s;
 }
@@ -125,7 +125,7 @@
     font-size: 2rem;
     color: #4CAF50;
     margin: 0.5rem 0;
-    font-weight: bold; /* Fuente en negrilla */
+    font-weight: bold;
 }
 
 /* Opciones de Respuesta */
@@ -143,13 +143,12 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.2rem;
-    font-weight: bold; /* Fuente en negrilla */
+    font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
 }
 
 .opcion:hover {
     background-color: #388e3c;
-    transform: scale(1.05);
 }
 
 .opcion.correcto {
@@ -164,6 +163,11 @@
     color: white;
 }
 
+.opcion.neutro {
+    background-color: #B0BEC5;
+    color: #FFFFFF;
+}
+
 /* Contenedor de Explicación */
 .explicacion {
     margin-top: 2rem;
@@ -176,11 +180,13 @@
 }
 
 .explicacion h3 {
-    color: #2C3E50; /* Color modificado */
-    font-weight: bold; /* Fuente en negrilla */
+    font-size: 1.4rem;
+    color: #2C3E50;
+    font-weight: bold;
 }
 
 .explicacion-pasos {
+    font-size: 1.1rem;
     white-space: pre-wrap;
     word-wrap: break-word;
     padding: 1rem;
@@ -188,7 +194,7 @@
     border-radius: 8px;
     text-align: left;
     margin-top: 1rem;
-    font-weight: bold; /* Fuente en negrilla */
+    font-weight: bold;
 }
 
 /* Botones de Navegación */
@@ -200,7 +206,7 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: bold; /* Fuente en negrilla */
+    font-weight: bold;
     margin-top: 1rem;
     transition: background-color 0.3s;
 }
@@ -224,5 +230,5 @@
     margin-bottom: 1rem;
     font-size: 1.4rem;
     color: #c62828;
-    font-weight: bold; /* Fuente en negrilla */
+    font-weight: bold;
 }

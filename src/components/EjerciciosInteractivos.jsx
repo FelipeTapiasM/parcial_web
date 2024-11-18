@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaAppleAlt } from 'react-icons/fa';
-import { FaMedal, FaTrophy } from 'react-icons/fa'; // Importar íconos de medalla y trofeo
+import { FaMedal, FaTrophy } from 'react-icons/fa';
 import '../styles/EjerciciosInteractivos.css';
 
-// Función para generar ejercicios según el tipo
 const generarEjercicio = (tipo) => {
   const cantidad1 = Math.floor(Math.random() * 10) + 1;
   const cantidad2 = Math.floor(Math.random() * 10) + 1;
@@ -210,16 +209,29 @@ const EjerciciosInteractivos = () => {
           </div>
 
           <div className="opciones">
-            {opciones.map((opcion) => (
-              <button
-                key={opcion}
-                onClick={() => manejarRespuesta(opcion)}
-                className={`opcion ${respuestaSeleccionada === opcion ? (opcion === respuestaCorrecta ? 'correcto' : 'incorrecto') : ''}`}
-                disabled={respuestaSeleccionada !== null}
-              >
-                {opcion}
-              </button>
-            ))}
+            {opciones.map((opcion) => {
+              let claseOpcion = 'opcion';
+              if (respuestaSeleccionada !== null) {
+                if (opcion === respuestaCorrecta) {
+                  claseOpcion += ' correcto';
+                } else if (opcion === respuestaSeleccionada) {
+                  claseOpcion += ' incorrecto';
+                } else {
+                  claseOpcion += ' neutro';
+                }
+              }
+
+              return (
+                <button
+                  key={opcion}
+                  onClick={() => manejarRespuesta(opcion)}
+                  className={claseOpcion}
+                  disabled={respuestaSeleccionada !== null}
+                >
+                  {opcion}
+                </button>
+              );
+            })}
           </div>
 
           {mostrarExplicacion && (
